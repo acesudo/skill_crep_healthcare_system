@@ -6,6 +6,15 @@ Operates strictly as a presentation layer consuming FastAPI endpoints.
 Zero ML models or inference logic loaded in Streamlit.
 """
 
+import os
+import sys
+from pathlib import Path
+
+# Ensure repository root is on sys.path regardless of execution context or Streamlit Cloud runner
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 import io
 import streamlit as st
 import pandas as pd
