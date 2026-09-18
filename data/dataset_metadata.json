@@ -1,0 +1,80 @@
+{
+  "dataset_version": "v1.0.0",
+  "generator_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "generation_timestamp": "2026-09-18T06:00:26.755462Z",
+  "generation_method": "deterministic_templated_lexical_synthesis",
+  "random_seed": 42,
+  "total_records": 900,
+  "train_records": 630,
+  "validation_records": 135,
+  "test_records": 135,
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "category_distribution": {
+    "Technical Issue": 150,
+    "Urgent Review": 150,
+    "Appointment": 150,
+    "Billing": 150,
+    "Medication Refill": 150,
+    "Report Request": 150
+  },
+  "urgency_distribution": {
+    "Routine": 630,
+    "Urgent": 270
+  },
+  "category_urgency_matrix": {
+    "Routine": {
+      "Appointment": 110,
+      "Billing": 120,
+      "Medication Refill": 100,
+      "Report Request": 115,
+      "Technical Issue": 120,
+      "Urgent Review": 65
+    },
+    "Urgent": {
+      "Appointment": 40,
+      "Billing": 30,
+      "Medication Refill": 50,
+      "Report Request": 35,
+      "Technical Issue": 30,
+      "Urgent Review": 85
+    }
+  },
+  "message_length_statistics": {
+    "mean": 171.23,
+    "std": 23.88,
+    "min": 101,
+    "max": 249
+  },
+  "validation_status": {
+    "overall_passed": true,
+    "quality_checks_passed": true,
+    "zero_leakage_passed": true,
+    "pii_violations": 0,
+    "exact_duplicates": 0,
+    "near_duplicates": 14
+  },
+  "field_definitions": {
+    "message_id": "Unique synthetic message identifier (MSG-XXXXXX)",
+    "message_text": "Synthetic patient support message string (Primary ML Feature)",
+    "category": "Operational topic category (Target Label 1)",
+    "urgency": "Operational turnaround priority: Routine or Urgent (Target Label 2)",
+    "department": "Assigned operational department queue (Derived downstream)",
+    "timestamp": "ISO 8601 synthetic submission timestamp",
+    "generation_source": "Source provenance generator tag",
+    "dataset_version": "Dataset release version identifier"
+  },
+  "prohibited_ml_features": [
+    "message_id",
+    "department",
+    "timestamp",
+    "generation_source",
+    "dataset_version",
+    "category",
+    "urgency"
+  ]
+}

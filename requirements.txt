@@ -1,0 +1,15 @@
+# PS-1 Patient Message Triage & Urgency Classifier
+# Core dependencies for ML training, FastAPI backend, and automated testing
+fastapi==0.136.1
+uvicorn==0.46.0
+pydantic==2.13.3
+python-multipart==0.0.22
+scikit-learn==1.9.1
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+joblib==1.6.0
+matplotlib==3.10.9
+pytest==9.1.1
+httpx==0.28.1
+streamlit==1.56.0

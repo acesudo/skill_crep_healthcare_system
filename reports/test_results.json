@@ -1,0 +1,141 @@
+{
+  "category": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "Appointment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Medication Refill": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Report Request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Technical Issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Urgent Review": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      }
+    },
+    "confusion_matrix": [
+      [
+        23,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        22,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        23,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        22,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        23
+      ]
+    ],
+    "labels": [
+      "Appointment",
+      "Billing",
+      "Medication Refill",
+      "Report Request",
+      "Technical Issue",
+      "Urgent Review"
+    ]
+  },
+  "urgency": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "urgent_recall": 1.0,
+    "urgent_precision": 1.0,
+    "urgent_f1": 1.0,
+    "routine_recall": 1.0,
+    "routine_precision": 1.0,
+    "routine_f1": 1.0,
+    "brier_score": 0.0341,
+    "confusion_matrix": [
+      [
+        95,
+        0
+      ],
+      [
+        0,
+        40
+      ]
+    ],
+    "labels": [
+      "Routine",
+      "Urgent"
+    ]
+  },
+  "confidence": {
+    "aggregation_formula": "C_overall = min(C_cat, C_urg)",
+    "selected_tau": 0.7,
+    "val_human_review_rate": 0.2,
+    "test_human_review_rate": 0.2296,
+    "test_routing_coverage": 0.7704,
+    "test_missed_urgent_auto_routed": 0
+  }
+}

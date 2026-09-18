@@ -1,0 +1,279 @@
+{
+  "category": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "Appointment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Medication Refill": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Report Request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Technical Issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Urgent Review": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      }
+    },
+    "confusion_matrix": [
+      [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        23,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        22,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        23,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        23
+      ]
+    ],
+    "labels": [
+      "Appointment",
+      "Billing",
+      "Medication Refill",
+      "Report Request",
+      "Technical Issue",
+      "Urgent Review"
+    ]
+  },
+  "urgency": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "urgent_recall": 1.0,
+    "urgent_precision": 1.0,
+    "urgent_f1": 1.0,
+    "routine_recall": 1.0,
+    "routine_precision": 1.0,
+    "routine_f1": 1.0,
+    "brier_score": 0.0338,
+    "confusion_matrix": [
+      [
+        94,
+        0
+      ],
+      [
+        0,
+        41
+      ]
+    ],
+    "labels": [
+      "Routine",
+      "Urgent"
+    ]
+  },
+  "tau_tuning": [
+    {
+      "tau": 0.6,
+      "routing_coverage": 0.9407,
+      "human_review_rate": 0.0593,
+      "auto_routed_count": 127,
+      "human_review_count": 8,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.62,
+      "routing_coverage": 0.8963,
+      "human_review_rate": 0.1037,
+      "auto_routed_count": 121,
+      "human_review_count": 14,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.64,
+      "routing_coverage": 0.8889,
+      "human_review_rate": 0.1111,
+      "auto_routed_count": 120,
+      "human_review_count": 15,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.66,
+      "routing_coverage": 0.8667,
+      "human_review_rate": 0.1333,
+      "auto_routed_count": 117,
+      "human_review_count": 18,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.68,
+      "routing_coverage": 0.8519,
+      "human_review_rate": 0.1481,
+      "auto_routed_count": 115,
+      "human_review_count": 20,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.7,
+      "routing_coverage": 0.8,
+      "human_review_rate": 0.2,
+      "auto_routed_count": 108,
+      "human_review_count": 27,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.72,
+      "routing_coverage": 0.6815,
+      "human_review_rate": 0.3185,
+      "auto_routed_count": 92,
+      "human_review_count": 43,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.74,
+      "routing_coverage": 0.6222,
+      "human_review_rate": 0.3778,
+      "auto_routed_count": 84,
+      "human_review_count": 51,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.76,
+      "routing_coverage": 0.5481,
+      "human_review_rate": 0.4519,
+      "auto_routed_count": 74,
+      "human_review_count": 61,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.78,
+      "routing_coverage": 0.4815,
+      "human_review_rate": 0.5185,
+      "auto_routed_count": 65,
+      "human_review_count": 70,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.8,
+      "routing_coverage": 0.3407,
+      "human_review_rate": 0.6593,
+      "auto_routed_count": 46,
+      "human_review_count": 89,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.82,
+      "routing_coverage": 0.2444,
+      "human_review_rate": 0.7556,
+      "auto_routed_count": 33,
+      "human_review_count": 102,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.84,
+      "routing_coverage": 0.0963,
+      "human_review_rate": 0.9037,
+      "auto_routed_count": 13,
+      "human_review_count": 122,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.86,
+      "routing_coverage": 0.0222,
+      "human_review_rate": 0.9778,
+      "auto_routed_count": 3,
+      "human_review_count": 132,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.88,
+      "routing_coverage": 0.0148,
+      "human_review_rate": 0.9852,
+      "auto_routed_count": 2,
+      "human_review_count": 133,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    },
+    {
+      "tau": 0.9,
+      "routing_coverage": 0.0,
+      "human_review_rate": 1.0,
+      "auto_routed_count": 0,
+      "human_review_count": 135,
+      "missed_urgent_auto_routed": 0,
+      "total_urgents": 41
+    }
+  ]
+}

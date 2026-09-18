@@ -1,0 +1,88 @@
+{
+  "model_version": "v1.0.0",
+  "dataset_version": "v1.0.0",
+  "training_seed": 42,
+  "training_timestamp": "2026-09-18T06:22:31.249791+00:00",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.14.4",
+  "tfidf_parameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.85,
+    "max_features": 2500,
+    "sublinear_tf": true,
+    "strip_accents": "unicode",
+    "norm": "l2"
+  },
+  "feature_count": 2500,
+  "category_model": {
+    "algorithm": "LogisticRegression",
+    "best_params": {
+      "C": 1.0,
+      "class_weight": "balanced"
+    },
+    "labels": [
+      "Appointment",
+      "Billing",
+      "Medication Refill",
+      "Report Request",
+      "Technical Issue",
+      "Urgent Review"
+    ],
+    "validation_macro_f1": 1.0,
+    "test_macro_f1": 1.0,
+    "test_accuracy": 1.0
+  },
+  "urgency_model": {
+    "algorithm": "LogisticRegression",
+    "best_params": {
+      "C": 1.0,
+      "class_weight": "balanced"
+    },
+    "labels": [
+      "Routine",
+      "Urgent"
+    ],
+    "validation_urgent_recall": 1.0,
+    "test_urgent_recall": 1.0,
+    "test_accuracy": 1.0,
+    "test_brier_score": 0.0341
+  },
+  "confidence_system": {
+    "aggregation_formula": "C_overall = min(C_cat, C_urg)",
+    "selected_tau": 0.7,
+    "val_human_review_rate": 0.2,
+    "test_human_review_rate": 0.2296,
+    "test_routing_coverage": 0.7704,
+    "test_missed_urgent_auto_routed": 0
+  },
+  "sample_explainability": {
+    "input_text": "hello it support the mobile portal app crashes every time i try to submit my pre...",
+    "predicted_category": "Technical Issue",
+    "top_features": [
+      [
+        "mobile",
+        0.1493
+      ],
+      [
+        "support",
+        0.1069
+      ],
+      [
+        "app",
+        0.1025
+      ],
+      [
+        "browser",
+        0.0907
+      ],
+      [
+        "portal",
+        0.0904
+      ]
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+Target,Model,Accuracy,Macro_F1,Weighted_F1,Urgent_Recall,Urgent_Precision
+Category,LogisticRegression,1.0,1.0,1.0,N/A,N/A
+Category,LinearSVC,1.0,1.0,1.0,N/A,N/A
+Category,MultinomialNB,1.0,1.0,1.0,N/A,N/A
+Urgency,LogisticRegression,1.0,1.0,1.0,1.0,1.0
+Urgency,LinearSVC,1.0,1.0,1.0,1.0,1.0
+Urgency,MultinomialNB,1.0,1.0,1.0,1.0,1.0
